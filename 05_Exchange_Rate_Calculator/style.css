@@ -26,12 +26,13 @@ p {
     text-align: center;
 }
 
-btn {
+.btn {
     color: #fff;
     background: var(--primary-color);
+    border: #fff;
     cursor: pointer;
     border-radius: 5px;
-    font-size: 12px;
+    font-size: 18px;
     padding: 5px 12px;
 }
 
@@ -75,7 +76,7 @@ btn {
 
 .rate {
     color: var(--primary-color);
-    font-size: 14px;
+    font-size: 18px;
     padding: 0 10px;
 }
 
