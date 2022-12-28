@@ -35,7 +35,7 @@ function createList() {
             listItem.innerHTML = `
             <span class="number">${index + 1}</span>
             <div class="draggable" draggable="true">
-                <p class="topic-name">${topic}</p>
+                <p class="type-name">${topic}</p>
                 <i class="fas fa-grip-lines"></i>
             </div>
         `;
@@ -44,6 +44,7 @@ function createList() {
 
             draggable_list.appendChild(listItem);
         });
+    addEventListeners();
 }
 
 function dragStart() {
@@ -72,8 +73,24 @@ function swapItems(fromIndex, toIndex) {
     const itemOne = listItems[fromIndex].querySelector(".draggable");
     const itemTwo = listItems[toIndex].querySelector(".draggable");
 
-    listItems[fromIndex].appendChild(itemOne);
-    listItems[toIndex].appendChild(itemTwo);
+    listItems[fromIndex].appendChild(itemTwo);
+    listItems[toIndex].appendChild(itemOne);
+}
+
+// Check the order of list items
+function checkOrder() {
+    listItems.forEach((listItem, index) => {
+        const itemName = listItem.querySelector(".draggable").innerText.trim();
+        console.log(listItem);
+
+        if (itemName !== toKnowList[index]) {
+            listItem.classList.add("wrong");
+            console.log(listItem);
+        } else {
+            listItem.classList.remove("wrong");
+            listItem.classList.add("right");
+        }
+    });
 }
 
 function addEventListeners() {
@@ -91,3 +108,5 @@ function addEventListeners() {
         item.addEventListener("dragleave", dragLeave);
     });
 }
+
+check.addEventListener("click", checkOrder);
