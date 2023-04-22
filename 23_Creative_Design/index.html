@@ -13,12 +13,12 @@
     <body>
         <div class="container">
             <!-- Section - 1 -->
-            <section class="section-1">
+            <section class="section-1" id="home">
                 <nav class="navbar">
-                    <a href="#" class="navbar-link">Design</a>
-                    <a href="#" class="navbar-link">Customers</a>
-                    <a href="#" class="navbar-link">Team</a>
-                    <a href="#" class="navbar-link">Contact</a>
+                    <a href="#home" class="navbar-link">Design</a>
+                    <a href="#customers" class="navbar-link">Customers</a>
+                    <a href="#team" class="navbar-link">Team</a>
+                    <a href="#contact" class="navbar-link">Contact</a>
                 </nav>
                 <div class="floating-bg"></div>
                 <div class="section-1-heading">Creative Design</div>
@@ -29,7 +29,7 @@
             <!-- End of Section - 1 -->
 
             <!-- Section 2 -->
-            <section class="section-2">
+            <section class="section-2" id="customers">
                 <h1 class="section-heading">Customers</h1>
                 <div class="customers-wrapper">
                     <div class="customer">
@@ -106,7 +106,7 @@
             <!-- End of section-2 -->
 
             <!-- Section-3 -->
-            <section class="section-3">
+            <section class="section-3" id="team">
                 <h1 class="section-heading">Team</h1>
                 <div class="team-wrapper">
                     <div class="team-member">
@@ -210,6 +210,33 @@
                     </div>
                 </div>
             </section>
+            <!-- End of section 3 -->
+
+            <!-- Section 4 -->
+            <section class="section-4" id="contact">
+                <h1 class="section-heading">Contact</h1>
+                <div class="form-container">
+                    <img
+                        src="images/form-img.png"
+                        alt="Form Img"
+                        class="form-img"
+                    />
+                    <form class="contact-form">
+                        <input type="text" placeholder="Your Name" />
+                        <input type="email" placeholder="Your Email" />
+                        <textarea placeholder="Your Message"></textarea>
+                        <input type="submit" value="Send" />
+                    </form>
+                </div>
+                <p class="copyright">
+                    Copyright &copy; Creative Design All Rights Reserved
+                </p>
+            </section>
+            <!-- End of section 4 -->
+
+            <a href="#" class="scroll-up-btn">
+                <i class="fas fa-arrow-up"></i>
+            </a>
         </div>
         <script src="script.js"></script>
     </body>
