@@ -13,6 +13,7 @@
 
 html {
     font-size: 62.5%;
+    scroll-behavior: smooth;
 }
 
 .center {
@@ -104,6 +105,12 @@ html {
     box-shadow: 0.2rem 0.2rem 0.5rem #555;
 }
 
+.sticky {
+    position: fixed;
+    top: 0;
+    z-index: 10;
+}
+
 .navbar-link {
     font-size: 1.7rem;
     font-weight: 600;
@@ -113,6 +120,10 @@ html {
     text-transform: uppercase;
     position: relative;
     transition: color 0.2s;
+}
+
+.change.navbar-link {
+    color: #fff;
 }
 
 .navbar-link:hover {
@@ -128,6 +139,10 @@ html {
     right: -15%;
     bottom: -0.3rem;
     transition: width 0.5s;
+}
+
+.change.navbar-link::before {
+    width: 130%;
 }
 
 .navbar-link:hover::hover {
@@ -175,10 +190,11 @@ html {
 }
 
 .progress-percent {
-    width: 90%;
+    width: 0;
     height: 100%;
     background-color: #e41c6f;
     border-radius: 0.3rem;
+    transition: width 0.5s 0.5s ease-in-out;
 }
 
 .services {
