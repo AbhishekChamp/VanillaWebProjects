@@ -33,6 +33,58 @@ html {
     box-shadow: 0 0.1rem 0.2rem rgba(0, 0, 0, 0.2);
 }
 
+.change .line {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.change .line-1 {
+    transform: rotate(45deg) translate(0.3rem, 0.8rem);
+}
+
+.change .line-2 {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.change .line-3 {
+    transform: rotate(-45deg) translate(0.3rem, -0.8rem);
+}
+
+.hamburger-menu span {
+    position: absolute;
+    right: 5rem;
+    width: 10rem;
+    height: 4rem;
+    background-color: #e2b646;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-family: "Baloo Da 2", serif;
+    font-size: 1.6rem;
+    letter-spacing: 0.1rem;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.2s;
+}
+
+.change .hamburger-menu:hover span {
+    opacity: 1;
+    visibility: visible;
+}
+
+.hamburger-menu span::before {
+    content: "";
+    position: absolute;
+    border-right: 1rem solid transparent;
+    border-left: 1rem solid #e2b646;
+    border-bottom: 1rem solid transparent;
+    border-top: 1rem solid transparent;
+    top: 50%;
+    right: -2rem;
+    transform: translateY(-50%);
+}
+
 .header {
     width: 100%;
     height: 100%;
@@ -107,6 +159,80 @@ html {
     box-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.4);
     cursor: pointer;
     animation: moveBanner 1s 0.9s forwards;
+}
+
+.sidebar {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    background-color: #fff;
+    transition: right 0.5s;
+}
+
+.change .sidebar {
+    right: 0;
+}
+
+.menu {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.menu-item {
+    text-align: center;
+}
+
+.menu-link {
+    font-family: "Baloo Da 2", serif;
+    font-size: 4rem;
+    color: #555;
+    position: relative;
+}
+
+.menu-link::before {
+    content: attr(data-content);
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #c29525;
+    width: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    transition: width 0.3s ease-in-out;
+}
+
+.menu-link:hover::before {
+    width: 100%;
+}
+
+.social-media {
+    position: absolute;
+    bottom: 3rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.social-media i {
+    font-size: 2.2rem;
+    margin: 3rem;
+    width: 4.5rem;
+    height: 4.5rem;
+    background-color: #777;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: background-color 0.3s;
+}
+
+.social-media i:hover {
+    background-color: #c29525;
 }
 
 @keyframes moveBanner {
