@@ -26,10 +26,8 @@ section {
     height: 100%;
     position: absolute;
     left: 0;
-}
-
-.section-5 {
-    z-index: 50;
+    overflow: hidden;
+    transition: left 1.5s;
 }
 
 .section-wrapper {
@@ -169,6 +167,10 @@ section {
 
 /* Section 1 */
 
+.section-1 {
+    z-index: 50;
+}
+
 .section-1-wrapper {
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.4)),
         url(images/section-1-bg.jpg) center no-repeat;
@@ -196,6 +198,10 @@ section {
 /* End of Section 1 */
 
 /* Section 2 */
+
+.section-2 {
+    z-index: 40;
+}
 
 .section-2-wrapper {
     background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.9)),
@@ -245,6 +251,10 @@ section {
 
 /* Section 3 */
 
+.section-3 {
+    z-index: 30;
+}
+
 .section-3-wrapper {
     background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.9)),
         url(images/section-3-bg.jpg) center no-repeat;
@@ -279,6 +289,10 @@ section {
 /* End of Section 3 */
 
 /* Section 4 */
+
+.section-4 {
+    z-index: 20;
+}
 
 .section-4-wrapper {
     display: flex;
@@ -317,6 +331,10 @@ section {
 /* End of Section 4 */
 
 /* Section 5 */
+
+.section-5 {
+    z-index: 10;
+}
 
 .section-5-wrapper {
     background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)),
