@@ -1,5 +1,4 @@
 /* Common Styles */
-
 * {
     margin: 0;
     padding: 0;
@@ -14,22 +13,12 @@ html {
     font-size: 62.5%;
 }
 
-.blue-btn {
-    width: 35rem;
-    height: 5rem;
-    background-color: #036bb1;
-    color: #fff;
-    border-radius: 3rem;
-    border: none;
-    font-size: 1.6rem;
-    font-weight: 600;
-}
-
 .logo {
     font-size: 3.5rem;
-    font-size: italic;
+    font-style: italic;
     font-weight: 800;
     color: #fff;
+    position: relative;
     cursor: pointer;
 }
 
@@ -48,12 +37,25 @@ html {
     left: 0.5rem;
 }
 
-/* End of common styles */
+.blue-btn {
+    width: 35rem;
+    height: 5rem;
+    background-color: #036bb1;
+    color: #fff;
+    border-radius: 3rem;
+    border: none;
+    font-size: 1.6rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+/* End of Common Styles */
 
 /* Front Page */
+.front-page {
+    /* display: none; */
+}
 
 /* Section 1 */
-
 .section-1 {
     width: 100%;
     height: 65vh;
@@ -74,13 +76,16 @@ html {
     display: flex;
     justify-content: center;
 }
-
 .navbar {
     width: 120rem;
     height: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.menu {
+    display: none;
 }
 
 .nav-list {
@@ -122,20 +127,24 @@ html {
     flex-direction: column;
 }
 
+.dropdown-heading {
+    display: none;
+}
+
 .nav-dropdown-link-1 {
     font-size: 1.6rem;
     color: #fff;
 }
 
 .nav-dropdown-link-2 {
-    font-size: 1.6rem;
+    font-size: 1.3rem;
     color: #fff;
 }
 
 .nav-list-link {
     width: 100%;
     height: 100%;
-    font-size: 1.3rem;
+    font-size: 1.7rem;
     font-weight: 400;
     text-transform: uppercase;
     color: #fff;
@@ -147,10 +156,6 @@ html {
     font-size: 1.5rem;
     margin-left: 0.5rem;
     transition: transform 0.3s;
-}
-
-.nav-list-item:hover .nav-list-link i {
-    transform: rotateZ(180deg);
 }
 
 .navbar-btn {
@@ -188,7 +193,7 @@ html {
 }
 
 .banner-paragraph {
-    font-size: 1.6rem;
+    font-size: 1.8rem;
     color: #fff;
     width: 50%;
     margin: 0 auto 4rem auto;
@@ -235,7 +240,7 @@ html {
 }
 
 .service-paragraph {
-    font-weight: 1.5rem;
+    font-size: 1.5rem;
     font-weight: 600;
     margin-bottom: 2rem;
     line-height: 1.2;
@@ -252,11 +257,117 @@ html {
     font-weight: bold;
     cursor: pointer;
 }
-
 /* End of Section 2 */
 
-/* Section 5 */
+/* Section 3 */
+.section-3 {
+    width: 100%;
+    padding: 5rem 0;
+    background: linear-gradient(
+        to right,
+        rgba(3, 33, 129, 0.9),
+        rgba(9, 67, 153, 0.8),
+        rgba(4, 32, 124, 0.9)
+    );
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
+.section-3-heading {
+    font-size: 5rem;
+    font-weight: 300;
+    margin-bottom: 5rem;
+}
+
+.features {
+    width: 70%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.feature {
+    width: calc(100% / 3);
+    text-align: center;
+    padding: 0 5rem;
+    margin-bottom: 5rem;
+}
+
+.feature-heading {
+    width: max-content;
+    font-size: 3rem;
+    font-weight: 300;
+    margin: 0 auto 1rem auto;
+}
+
+.feature-paragraph {
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: 1.2;
+}
+/* End of Section 3 */
+
+/* Section 4 */
+.section-4 {
+    width: 100%;
+    padding: 10rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.section-4-heading {
+    font-size: 5rem;
+    font-weight: 400;
+    color: #444;
+    margin-bottom: 5rem;
+}
+
+.section-4-content {
+    display: flex;
+}
+
+.section-4-img-wrapper {
+    width: 50rem;
+}
+
+.section-4-img-wrapper img {
+    width: 100%;
+    opacity: 0.8;
+}
+
+.section-4-list {
+    width: 55%;
+    margin-top: 2rem;
+}
+
+.section-4-list-item {
+    font-size: 1.6rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.number {
+    width: 3.5rem;
+    height: 3.5rem;
+    border: 0.1rem solid #555;
+    border-radius: 50%;
+    margin-right: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section-4-list-item a {
+    color: #036bb1;
+    font-weight: bold;
+}
+/* End of Section 4 */
+
+/* Section 5 */
 .section-5 {
     width: 100%;
 }
@@ -317,18 +428,15 @@ html {
     font-weight: 600;
     letter-spacing: 0.1rem;
 }
-
 /* End of Section 5 */
-
 /* End of Front Page */
 
 /* Login Page */
-
 .login-page {
-    display: none;
     width: 100%;
     height: 100vh;
     position: relative;
+    display: none;
 }
 
 .login-page-content {
@@ -405,7 +513,17 @@ html {
     position: relative;
 }
 
-.login-page-form span::before,
+.login-page-form span::before {
+    content: "";
+    width: 16rem;
+    height: 0.1rem;
+    background-color: #ccc;
+    position: absolute;
+    top: 50%;
+    right: 3.5rem;
+    transform: translateY(-50%);
+}
+
 .login-page-form span::after {
     content: "";
     width: 16rem;
@@ -413,15 +531,8 @@ html {
     background-color: #ccc;
     position: absolute;
     top: 50%;
-    transform: translateY(-50%);
-}
-
-.login-page-form span::before {
-    right: 3.5rem;
-}
-
-.login-page-form span::after {
     left: 3.5rem;
+    transform: translateY(-50%);
 }
 
 .form-signup-btn {
@@ -431,11 +542,9 @@ html {
     font-weight: 600;
     cursor: pointer;
 }
-
 /* End of Login Page */
 
 /* Sign Up Page */
-
 .signup-page {
     width: 100%;
     height: 100vh;
@@ -444,10 +553,9 @@ html {
         rgba(112, 112, 112, 0.9),
         rgba(255, 255, 255, 0.8) 10%
     );
-    display: flex;
+    display: none;
     flex-direction: column;
     align-items: center;
-    display: none;
 }
 
 .signup-page-top {
@@ -483,7 +591,7 @@ html {
 
 .signup-page-content-left {
     width: 60%;
-    border-radius: 0.1rem solid #b1b1b1;
+    border-right: 0.1rem solid #b1b1b1;
     padding: 3rem 3rem 3rem 0;
 }
 
@@ -541,5 +649,479 @@ html {
     height: 2rem;
     margin: 0.5rem 1rem 0 -1.5rem;
 }
-
 /* End of Sign Up Page */
+
+/* Responsive */
+@media (max-width: 1500px) {
+    .nav-dropdown {
+        padding: 0 25rem;
+    }
+
+    .nav-dropdown-item {
+        margin: 2rem 6rem;
+    }
+
+    .features {
+        width: 80%;
+    }
+
+    .feature {
+        padding: 0 3rem;
+    }
+}
+
+@media (max-width: 1400px) {
+    html {
+        font-size: 55%;
+    }
+
+    .navbar {
+        width: 100rem;
+    }
+
+    .section-1 {
+        height: 70vh;
+    }
+
+    .banner-paragraph {
+        width: 70%;
+    }
+
+    .services {
+        width: 90%;
+    }
+
+    .features {
+        width: 90%;
+    }
+
+    .section-4-content {
+        width: 80%;
+    }
+
+    .section-4-img-wrapper {
+        width: 40%;
+        margin-right: 6rem;
+    }
+
+    .signup-page {
+        background: linear-gradient(
+            to bottom,
+            rgba(112, 112, 112, 0.9),
+            rgba(255, 255, 255, 0.8) 12%
+        );
+    }
+}
+
+@media (max-width: 1200px) {
+    .signup-page-top {
+        width: 90rem;
+    }
+
+    .signup-page-content {
+        width: 90rem;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .signup-page-content-left {
+        width: 100%;
+        border-right: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        border-bottom: 0.1rem solid #b1b1b1;
+    }
+
+    .signup-page-content-right {
+        width: 100%;
+        padding: 3rem;
+    }
+
+    .input-group input[type="radio"] {
+        width: 10%;
+        margin: 0.5rem 0 0 -3rem;
+    }
+
+    .signup-page-content-right .blue-btn {
+        width: 100%;
+        margin: 3rem 0;
+    }
+}
+
+@media (max-width: 1100px) {
+    .nav-dropdown-item {
+        margin: 2rem 3.4rem;
+    }
+}
+
+@media (max-width: 1000px) {
+    html {
+        font-size: 50%;
+    }
+
+    .navbar {
+        width: 100%;
+        padding: 0 5rem;
+    }
+
+    .navbar-logo {
+        position: absolute;
+        top: 4rem;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .menu {
+        width: 11rem;
+        height: 4rem;
+        border-radius: 3rem;
+        border: 0.1rem solid #fff;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        transition: transform 0.6s cubic-bezier(1, 0, 0, 1);
+    }
+
+    .change .menu {
+        transform: translateX(16rem);
+        position: fixed;
+        top: 2rem;
+        left: 6rem;
+        background-color: #eee;
+    }
+
+    .menu-icon {
+        height: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .line {
+        width: 2rem;
+        height: 0.1rem;
+        background-color: #fff;
+        transform-origin: left;
+    }
+
+    .change .line-1 {
+        transform: rotate(45deg);
+        background-color: #444;
+    }
+
+    .change .line-2 {
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    .change .line-3 {
+        transform: rotate(-45deg);
+        background-color: #444;
+    }
+
+    .menu span {
+        font-size: 1.8rem;
+        color: #fff;
+    }
+
+    .change .menu span {
+        color: #555;
+    }
+
+    .nav-list,
+    .nav-dropdown-personal,
+    .nav-dropdown-business {
+        /* display: none; */
+        position: fixed;
+        top: 0;
+        left: -20rem;
+        width: 20rem;
+        height: 100vh;
+        background: linear-gradient(to bottom, #032181, #094399, #04207c);
+        flex-direction: column;
+        padding-top: 2rem;
+        z-index: 200;
+        transition: left 0.6s cubic-bezier(1, 0, 0, 1);
+    }
+
+    .change .nav-list {
+        left: 0;
+    }
+
+    .nav-dropdown-personal,
+    .nav-dropdown-business {
+        opacity: 1;
+        visibility: visible;
+        padding: 1rem;
+        justify-content: flex-start;
+    }
+
+    .nav-dropdown-item {
+        width: 100%;
+        margin: 1rem 1rem 0 1rem;
+    }
+
+    .dropdown-heading {
+        display: block;
+    }
+
+    .dropdown-heading a {
+        font-size: 1.6rem;
+        text-transform: uppercase;
+        color: #fff;
+    }
+
+    .dropdown-heading a i {
+        font-size: 1.5rem;
+        transform: rotate(90deg);
+        margin-right: 1rem;
+    }
+
+    .nav-dropdown-link-1 {
+        font-size: 1.4rem;
+    }
+
+    .nav-dropdown-link-2 {
+        display: none;
+    }
+
+    .nav-list-item {
+        width: 100%;
+        height: auto;
+        padding: 0 1rem;
+        margin: 0.4rem 0;
+    }
+
+    .nav-list-item:hover {
+        border-bottom: none;
+    }
+
+    .nav-list-link {
+        font-size: 1.4rem;
+    }
+
+    .nav-list-item i {
+        font-size: 1.2rem;
+        transform: rotate(-90deg);
+    }
+
+    .navbar-buttons {
+        margin-left: auto;
+    }
+
+    .section-2-heading {
+        font-size: 4rem;
+    }
+
+    .features {
+        width: 95%;
+    }
+
+    .feature {
+        padding: 0 1.5rem;
+    }
+
+    .section-4-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .section-4-img-wrapper {
+        margin: auto;
+    }
+
+    .section-4-list {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-top {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-list {
+        margin-bottom: 1rem;
+    }
+
+    .copyright {
+        margin: 1.5rem 0;
+    }
+}
+
+@media (max-width: 800px) {
+    html {
+        font-size: 45%;
+    }
+
+    .section-2 {
+        padding: 10rem 0;
+    }
+
+    .section-2-heading {
+        width: 80%;
+        text-align: center;
+        line-height: 1.2;
+    }
+
+    .services {
+        width: 95%;
+    }
+
+    .service {
+        width: 30rem;
+        margin: 0 2rem;
+    }
+
+    .service i {
+        font-size: 4rem;
+    }
+
+    .service-btn {
+        width: 15rem;
+        padding: 1rem;
+    }
+
+    .features {
+        width: 100%;
+    }
+
+    .feature {
+        width: 50%;
+        padding: 0 4rem;
+    }
+
+    .signup-page-top {
+        width: 50rem;
+    }
+
+    .signup-page-content {
+        width: 85%;
+        padding: 0 3rem;
+    }
+
+    .signup-page-content-left {
+        width: 100%;
+        padding: 3rem;
+    }
+
+    .content-left-images img {
+        width: 14rem;
+        margin: 0 1.5rem;
+        border: 1rem solid #ccc;
+    }
+
+    .signup-page-content-left h1 {
+        font-size: 3rem;
+    }
+
+    .signup-page-content-right {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 3rem;
+    }
+
+    .input-group input[type="radio"] {
+        width: 20%;
+        margin: 0.5rem 1.5rem 0 0;
+    }
+}
+
+@media (max-width: 550px) {
+    .navbar-logo {
+        display: none;
+    }
+
+    .banner-heading {
+        font-size: 4.5rem;
+    }
+
+    .banner-paragraph {
+        line-height: 1.2;
+    }
+
+    .services {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .service {
+        width: 60%;
+        margin-bottom: 4rem;
+    }
+
+    .section-3-heading {
+        font-size: 4rem;
+    }
+
+    .features {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .feature {
+        width: 80%;
+    }
+
+    .section-4-heading {
+        font-size: 4rem;
+    }
+
+    .section-4-content {
+        width: 100%;
+        padding: 0 3rem;
+    }
+
+    .section-4-img-wrapper {
+        display: none;
+    }
+
+    .section-4-list {
+        align-items: flex-start;
+    }
+
+    .footer-top {
+        width: 90%;
+    }
+
+    .signup-page-top {
+        width: 40rem;
+    }
+
+    .signup-page-content {
+        width: 100%;
+    }
+
+    .signup-page-content-left {
+        display: none;
+    }
+
+    .signup-page-content-right {
+        width: 100%;
+    }
+}
+
+@media (max-width: 400px) {
+    html {
+        font-size: 40%;
+    }
+
+    .menu {
+        width: 5rem;
+    }
+
+    .menu span {
+        display: none;
+    }
+
+    .number {
+        min-width: 3.5rem;
+    }
+}
+/* End of Responsive */
